@@ -1,1 +1,4 @@
-# ICT_project_SE-2018
+# It is ERD for final project of ICT course.
+
+
+![ERD](ICT_project.jpeg)
