@@ -1,4 +1,4 @@
 # It is ERD for final project of ICT course.
 
 
-![ERD](ICT_project.jpeg)
+![ERD](Final_ERD_ICT.jpeg)
