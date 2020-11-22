@@ -78,14 +78,14 @@ FOREIGN KEY (loc_id) REFERENCES location(loc_id),
 FOREIGN KEY (date_time_id) REFERENCES date_time(date_time_id)
 );
 
---number 4
+--Task number 4---------------------------------------------------------------------------------------------------
 ALTER TABLE instruments ALTER COLUMN instrument_name VARCHAR(33);
 ALTER TABLE instruments ADD instrument_age;
 ALTER TABLE instruments DROP COLUMN instrument_age;
 ALTER TABLE instruments ADD CONSTRAINT instrument_constraint;
 ALTER TABLE instruments DROP CONSTRAINT instrument_constraint;
 
---number 5
+--Task number 5---------------------------------------------------------------------------------------------------
 INSERT INTO event (event_id, event_type, event_name)
 VALUES (1,'Banquet','banquet_nazarbayev'),
 (2,'Concert','astana_arena_DOS'),
@@ -292,7 +292,7 @@ DELETE FROM date_time WHERE date_time_id = 511;
 UPDATE instruments SET instrument_name = 'electric_giutar' WHERE instrument_id = 311;
 DELETE FROM instruments WHERE instrument_id = 311;
 
---number 6
+--Task number 6---------------------------------------------------------------------------------------------------------------------------
 SELECT DISTINCT * FROM event WHERE event_id BETWEEN 5 AND 9;                                                                         --(1)
 SELECT loc_id,COUNT(location) AS nameLength, LENGTH(location) AS sumOfLength FROM location GROUP BY loc_id;                          --(2)
 SELECT SUM(band_cost) AS sumCost FROM band WHERE band_id > 103 and band_id < 106;                                                    --(3)
@@ -310,7 +310,7 @@ SELECT SUM(staff_number_max) AS allStaff FROM staff;                            
 SELECT to_char(AVG(staff_cost),'999.99') AS avgCost FROM staff WHERE staff_cost > 90;                                                --(9)
 SELECT MAX(staff_number) AS maxStaff, MIN(staff_number) AS minStaff FROM staff_list;                                                 --(10)
 
---number 7
+--Task number 7---------------------------------------------------------------------------------------------------------------------------
 SELECT event_name,date,time FROM date_time JOIN organization ON  --(1)
 date_time.date_time_id = organization.date_time_id JOIN event ON
 event.event_id = organization.event_id;
